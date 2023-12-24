@@ -1,4 +1,5 @@
 import { createRoot } from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 
 const container = document.getElementById('root') as HTMLElement;
@@ -11,3 +12,9 @@ window.electron.ipcRenderer.once('ipc-example', (arg) => {
   console.log(arg);
 });
 window.electron.ipcRenderer.sendMessage('ipc-example', ['ping']);
+
+declare global {
+  interface Window {
+    require: any;
+  }
+}

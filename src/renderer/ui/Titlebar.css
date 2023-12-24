@@ -1,0 +1,10 @@
+.titlebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    -webkit-app-region: drag;
+    border-top: solid 1px #484169;
+    background-color: #251f36;
+}
